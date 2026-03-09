@@ -6,7 +6,7 @@ Este sistema representa una **empresa ficticia de logística y transporte** llam
 
 ## 👥 Autores
 
-- Matías Gajardo Castillo
+- Matías Gajardo
 - Jean Pierre Avastia
 
 Trabajo realizado en conjunto como parte del proceso formativo en desarrollo backend.
