@@ -1,87 +1,105 @@
-# Logistica Global LTDA 🚚✈️
+# Gestión logística y transporte
+
+Sistema web académico para la administración de operaciones logísticas terrestres y aéreas, desarrollado con Django y Django REST Framework.
 
 Proyecto académico desarrollado durante **2025** para la **Evaluación 3 de Backend**.
 
-Este sistema representa una **empresa ficticia de logística y transporte** llamada *Logistica Global LTDA*, enfocada en la gestión de operaciones terrestres y aéreas.
-
-## 👥 Autores
+## Autores
 
 - Matías Gajardo
 - Jean Pierre Avastia
 
-Trabajo realizado en conjunto como parte del proceso formativo en desarrollo backend.
+Proyecto realizado en equipo como parte del proceso formativo en desarrollo backend.
 
-## 🧩 Descripción del proyecto
+## Descripción del proyecto
 
-La aplicación permite administrar los procesos principales de una operación logística moderna:
+La aplicación representa una empresa ficticia de logística y transporte llamada *Logística Global LTDA*. Permite administrar procesos relacionados con clientes, recursos de transporte, cargas y despachos.
 
-- Gestión de clientes
-- Registro de vehículos y aeronaves
-- Administración de conductores y pilotos
-- Definición de rutas terrestres y aéreas
-- Control de cargas
-- Creación y seguimiento de despachos
+El sistema incluye:
 
-Además de la parte de gestión, el proyecto incluye una interfaz web con diseño responsive y una API REST documentada con Swagger para pruebas y consumo de endpoints.
+- Gestión de clientes.
+- Registro de vehículos y aeronaves.
+- Administración de conductores y pilotos.
+- Definición de rutas terrestres y aéreas.
+- Control de cargas.
+- Creación y seguimiento de despachos.
 
-## ✨ Características principales
+Además, incorpora una interfaz web responsive y una API REST documentada mediante Swagger y ReDoc.
 
-- CRUD completo para módulos de negocio
-- API REST con Django REST Framework
-- Documentación interactiva en Swagger y Redoc
-- Filtros en módulos clave (por ejemplo, rutas y cargas)
-- Interfaz web con plantillas Django + Bootstrap
+## Características principales
 
-## 🛠️ Stack tecnológico
+- Operaciones CRUD para los módulos de negocio.
+- API REST desarrollada con Django REST Framework.
+- Documentación interactiva mediante Swagger y ReDoc.
+- Filtros en módulos relevantes, como rutas y cargas.
+- Interfaz web basada en plantillas Django y Bootstrap.
+
+## Tecnologías
 
 - Python 3.13
 - Django 5.2
 - Django REST Framework
-- drf-yasg (Swagger / Redoc)
-- HTML, CSS, JS, Bootstrap
+- drf-yasg
+- HTML, CSS y JavaScript
+- Bootstrap
 
-## 🗂️ Módulos del sistema
+## Módulos del sistema
 
-- `Clientes`
-- `Vehículos`
-- `Aeronaves`
-- `Conductores`
-- `Pilotos`
-- `Rutas`
-- `Cargas`
-- `Despachos`
+- Clientes
+- Vehículos
+- Aeronaves
+- Conductores
+- Pilotos
+- Rutas
+- Cargas
+- Despachos
 
-## 🚀 Puesta en marcha local
+## Puesta en marcha local
 
-1. Clonar el repositorio.
-2. Entrar a la carpeta del proyecto.
-3. Crear y activar entorno virtual.
-4. Instalar dependencias.
-5. Aplicar migraciones.
-6. Iniciar servidor.
+### 1. Clonar el repositorio
 
-Comandos sugeridos en Windows PowerShell:
+```powershell
+git clone <url-del-repositorio>
+cd <nombre-del-repositorio>
+```
+
+### 2. Crear y activar el entorno virtual
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\activate
+```
+
+### 3. Instalar dependencias
+
+```powershell
 pip install -r requirements.txt
+```
+
+### 4. Aplicar migraciones
+
+```powershell
 python manage.py migrate
+```
+
+### 5. Iniciar el servidor
+
+```powershell
 python manage.py runserver
 ```
 
-Abrir en navegador:
+## Rutas principales
 
-- `http://127.0.0.1:8000/` (sitio web)
-- `http://127.0.0.1:8000/swagger/` (documentación Swagger)
-- `http://127.0.0.1:8000/redoc/` (documentación Redoc)
+| Ruta | Descripción |
+|------|-------------|
+| `http://127.0.0.1:8000/` | Sitio web de la aplicación |
+| `http://127.0.0.1:8000/swagger/` | Documentación Swagger |
+| `http://127.0.0.1:8000/redoc/` | Documentación ReDoc |
 
-## ☁️ Despliegue
+## Despliegue
 
-Como parte del trabajo académico, el proyecto también fue llevado a un entorno de despliegue en **AWS** durante la evaluación.
+Como parte del trabajo académico, el proyecto fue llevado a un entorno de despliegue en **AWS** durante la evaluación. La versión disponible en este repositorio está orientada a la ejecución y revisión local.
 
-## 🎯 Contexto académico
+## Alcance académico
 
-Este repositorio conserva una entrega importante del curso para poder revisar decisiones, estructura y avances logrados en su momento.
-
-En resumen: una base sólida de backend con enfoque práctico en logística, desarrollada en equipo y con valor como referencia para proyectos futuros.
+Este repositorio corresponde a una implementación académica funcional de alcance introductorio-intermedio. Su objetivo fue aplicar fundamentos de backend, modelado de entidades, operaciones CRUD, APIs REST y documentación de servicios en un dominio logístico.
