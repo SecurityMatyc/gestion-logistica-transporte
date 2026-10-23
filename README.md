@@ -2,7 +2,19 @@
 
 Sistema web académico para la administración de operaciones logísticas terrestres y aéreas, desarrollado con Django y Django REST Framework.
 
-Proyecto académico desarrollado durante **2025** para la **Evaluación 3 de Backend**.
+Proyecto desarrollado durante **2025** para la **Evaluación 3 de Backend**.
+
+## Estado del proyecto
+
+Implementación académica funcional de alcance introductorio-intermedio. El sistema representa una base de gestión logística con módulos de clientes, recursos de transporte, cargas, rutas y despachos.
+
+La versión disponible está orientada a la ejecución local y la revisión técnica. Como parte del trabajo académico, el proyecto también fue llevado a un entorno de despliegue en AWS durante la evaluación.
+
+## Contexto y objetivo
+
+La aplicación representa una empresa ficticia de logística y transporte llamada *Logística Global LTDA*.
+
+El objetivo fue aplicar fundamentos de desarrollo backend para organizar procesos asociados a operaciones terrestres y aéreas, desde el registro de recursos y cargas hasta la creación y seguimiento de despachos.
 
 ## Autores
 
@@ -11,28 +23,55 @@ Proyecto académico desarrollado durante **2025** para la **Evaluación 3 de Bac
 
 Proyecto realizado en equipo como parte del proceso formativo en desarrollo backend.
 
-## Descripción del proyecto
+## Flujo general de operación
 
-La aplicación representa una empresa ficticia de logística y transporte llamada *Logística Global LTDA*. Permite administrar procesos relacionados con clientes, recursos de transporte, cargas y despachos.
+1. Se registran clientes y recursos de transporte disponibles.
+2. Se incorporan vehículos, aeronaves, conductores y pilotos.
+3. Se definen rutas terrestres o aéreas.
+4. Se registran y asocian cargas a una operación logística.
+5. Se crea un despacho con la información correspondiente.
+6. Se consulta y actualiza el seguimiento del despacho.
 
-El sistema incluye:
+## Funcionalidades principales
 
-- Gestión de clientes.
-- Registro de vehículos y aeronaves.
-- Administración de conductores y pilotos.
+### Gestión de recursos
+
+- Registro de vehículos.
+- Registro de aeronaves.
+- Administración de conductores.
+- Administración de pilotos.
+- Asociación de recursos con operaciones logísticas.
+
+### Gestión de operaciones
+
+- Registro y gestión de clientes.
 - Definición de rutas terrestres y aéreas.
-- Control de cargas.
+- Registro y control de cargas.
 - Creación y seguimiento de despachos.
+- Filtros en módulos relevantes, como rutas y cargas.
 
-Además, incorpora una interfaz web responsive y una API REST documentada mediante Swagger y ReDoc.
-
-## Características principales
+### Interfaz y API
 
 - Operaciones CRUD para los módulos de negocio.
-- API REST desarrollada con Django REST Framework.
+- Interfaz web responsive basada en plantillas Django.
+- Componentes visuales desarrollados con Bootstrap.
+- API REST implementada con Django REST Framework.
 - Documentación interactiva mediante Swagger y ReDoc.
-- Filtros en módulos relevantes, como rutas y cargas.
-- Interfaz web basada en plantillas Django y Bootstrap.
+
+## Arquitectura y módulos
+
+El proyecto está organizado alrededor de los principales conceptos del dominio logístico:
+
+- Clientes.
+- Vehículos.
+- Aeronaves.
+- Conductores.
+- Pilotos.
+- Rutas.
+- Cargas.
+- Despachos.
+
+La aplicación utiliza Django como framework principal para el modelado de datos, las vistas web, las rutas y la exposición de servicios REST.
 
 ## Tecnologías
 
@@ -42,17 +81,6 @@ Además, incorpora una interfaz web responsive y una API REST documentada median
 - drf-yasg
 - HTML, CSS y JavaScript
 - Bootstrap
-
-## Módulos del sistema
-
-- Clientes
-- Vehículos
-- Aeronaves
-- Conductores
-- Pilotos
-- Rutas
-- Cargas
-- Despachos
 
 ## Puesta en marcha local
 
@@ -88,18 +116,32 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## Rutas principales
+## Rutas y documentación de la API
 
-| Ruta | Descripción |
-|------|-------------|
-| `http://127.0.0.1:8000/` | Sitio web de la aplicación |
-| `http://127.0.0.1:8000/swagger/` | Documentación Swagger |
-| `http://127.0.0.1:8000/redoc/` | Documentación ReDoc |
+| Método | Ruta | Descripción |
+|--------|------|-------------|
+| `GET` | `http://127.0.0.1:8000/` | Sitio web de la aplicación |
+| `GET` | `http://127.0.0.1:8000/swagger/` | Documentación Swagger |
+| `GET` | `http://127.0.0.1:8000/redoc/` | Documentación ReDoc |
 
 ## Despliegue
 
-Como parte del trabajo académico, el proyecto fue llevado a un entorno de despliegue en **AWS** durante la evaluación. La versión disponible en este repositorio está orientada a la ejecución y revisión local.
+Como parte del trabajo académico, el proyecto fue llevado a un entorno de despliegue en **AWS** durante la evaluación.
 
-## Alcance académico
+La versión disponible en este repositorio está orientada a la ejecución local y utiliza la configuración necesaria para revisar el sistema sin depender del entorno original de despliegue.
 
-Este repositorio corresponde a una implementación académica funcional de alcance introductorio-intermedio. Su objetivo fue aplicar fundamentos de backend, modelado de entidades, operaciones CRUD, APIs REST y documentación de servicios en un dominio logístico.
+## Alcance y limitaciones
+
+Este repositorio representa una implementación académica funcional de alcance introductorio-intermedio. Antes de utilizarlo como solución productiva sería necesario revisar, entre otros aspectos:
+
+- Validaciones y reglas de negocio más completas.
+- Control de acceso y autenticación para todos los módulos.
+- Gestión de variables de entorno y secretos.
+- Configuración de una base de datos para producción.
+- Registro de eventos, monitoreo y respaldos.
+- Pruebas automatizadas y controles de seguridad.
+- Integración con servicios externos de transporte o seguimiento en tiempo real.
+
+## Contexto académico
+
+Este repositorio conserva una entrega desarrollada durante la **Evaluación 3 de Backend**. Su propósito fue aplicar modelado de entidades, operaciones CRUD, organización de un dominio logístico, desarrollo de una interfaz web, exposición de una API REST y documentación de servicios.
